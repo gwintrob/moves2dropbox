@@ -1,0 +1,7 @@
+- if current_user
+  %h2 Linked accounts
+  - current_user.identities.each do |identity|
+    %div= identity.to_s
+
+- %w{moves dropbox}.each do |provider|
+  %div{:class => provider}= link_to "Sign in with #{provider}", "/auth/#{provider}"

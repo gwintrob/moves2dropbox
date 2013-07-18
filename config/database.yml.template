@@ -1,0 +1,12 @@
+development: &default
+  adapter: postgresql
+  host: localhost
+  username: USERNAME
+
+development:
+  <<: *default
+  database: moves2dropbox-dev
+
+test:
+  <<: *default
+  database: moves2dropbox-test
